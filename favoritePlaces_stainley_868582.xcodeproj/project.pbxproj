@@ -11,7 +11,7 @@
 		ADEC1DE129809BBE00471AF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEC1DE029809BBE00471AF9 /* SceneDelegate.swift */; };
 		ADEC1DE329809BBE00471AF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEC1DE229809BBE00471AF9 /* ViewController.swift */; };
 		ADEC1DE629809BBE00471AF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADEC1DE429809BBE00471AF9 /* Main.storyboard */; };
-		ADEC1DE929809BBE00471AF9 /* favoritePlaces_stainley_868582.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ADEC1DE729809BBE00471AF9 /* favoritePlaces_stainley_868582.xcdatamodeld */; };
+		ADEC1DE929809BBE00471AF9 /* FavoritePlaces.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ADEC1DE729809BBE00471AF9 /* FavoritePlaces.xcdatamodeld */; };
 		ADEC1DEB29809BBF00471AF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADEC1DEA29809BBF00471AF9 /* Assets.xcassets */; };
 		ADEC1DEE29809BBF00471AF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADEC1DEC29809BBF00471AF9 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -58,16 +58,40 @@
 		ADEC1DDD29809BBE00471AF9 /* favoritePlaces_stainley_868582 */ = {
 			isa = PBXGroup;
 			children = (
+				ADEC1DF529809BEF00471AF9 /* Model */,
+				ADEC1DF629809BF900471AF9 /* View */,
+				ADEC1DF729809C0500471AF9 /* Controller */,
 				ADEC1DDE29809BBE00471AF9 /* AppDelegate.swift */,
 				ADEC1DE029809BBE00471AF9 /* SceneDelegate.swift */,
-				ADEC1DE229809BBE00471AF9 /* ViewController.swift */,
-				ADEC1DE429809BBE00471AF9 /* Main.storyboard */,
 				ADEC1DEA29809BBF00471AF9 /* Assets.xcassets */,
 				ADEC1DEC29809BBF00471AF9 /* LaunchScreen.storyboard */,
 				ADEC1DEF29809BBF00471AF9 /* Info.plist */,
-				ADEC1DE729809BBE00471AF9 /* favoritePlaces_stainley_868582.xcdatamodeld */,
+				ADEC1DE729809BBE00471AF9 /* FavoritePlaces.xcdatamodeld */,
 			);
 			path = favoritePlaces_stainley_868582;
+			sourceTree = "<group>";
+		};
+		ADEC1DF529809BEF00471AF9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ADEC1DF629809BF900471AF9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ADEC1DE429809BBE00471AF9 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ADEC1DF729809C0500471AF9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ADEC1DE229809BBE00471AF9 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,7 +168,7 @@
 				ADEC1DE329809BBE00471AF9 /* ViewController.swift in Sources */,
 				ADEC1DDF29809BBE00471AF9 /* AppDelegate.swift in Sources */,
 				ADEC1DE129809BBE00471AF9 /* SceneDelegate.swift in Sources */,
-				ADEC1DE929809BBE00471AF9 /* favoritePlaces_stainley_868582.xcdatamodeld in Sources */,
+				ADEC1DE929809BBE00471AF9 /* FavoritePlaces.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,13 +388,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		ADEC1DE729809BBE00471AF9 /* favoritePlaces_stainley_868582.xcdatamodeld */ = {
+		ADEC1DE729809BBE00471AF9 /* FavoritePlaces.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				ADEC1DE829809BBE00471AF9 /* favoritePlaces_stainley_868582.xcdatamodel */,
 			);
 			currentVersion = ADEC1DE829809BBE00471AF9 /* favoritePlaces_stainley_868582.xcdatamodel */;
-			path = favoritePlaces_stainley_868582.xcdatamodeld;
+			path = FavoritePlaces.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
