@@ -14,6 +14,10 @@
 		ADEC1DE929809BBE00471AF9 /* FavoritePlaces.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ADEC1DE729809BBE00471AF9 /* FavoritePlaces.xcdatamodeld */; };
 		ADEC1DEB29809BBF00471AF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADEC1DEA29809BBF00471AF9 /* Assets.xcassets */; };
 		ADEC1DEE29809BBF00471AF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADEC1DEC29809BBF00471AF9 /* LaunchScreen.storyboard */; };
+		ADEC1DF929809D3C00471AF9 /* MapPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEC1DF829809D3C00471AF9 /* MapPlaceViewController.swift */; };
+		ADEC1DFB29809E4500471AF9 /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEC1DFA29809E4500471AF9 /* PlaceAnnotation.swift */; };
+		ADEC1DFE29809ED400471AF9 /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEC1DFC29809ED400471AF9 /* PlaceTableViewCell.swift */; };
+		ADEC1DFF29809ED400471AF9 /* PlaceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADEC1DFD29809ED400471AF9 /* PlaceTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		ADEC1DEA29809BBF00471AF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADEC1DED29809BBF00471AF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADEC1DEF29809BBF00471AF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADEC1DF829809D3C00471AF9 /* MapPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPlaceViewController.swift; sourceTree = "<group>"; };
+		ADEC1DFA29809E4500471AF9 /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
+		ADEC1DFC29809ED400471AF9 /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
+		ADEC1DFD29809ED400471AF9 /* PlaceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,7 @@
 		ADEC1DF529809BEF00471AF9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ADEC1DFA29809E4500471AF9 /* PlaceAnnotation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -82,6 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				ADEC1DE429809BBE00471AF9 /* Main.storyboard */,
+				ADEC1DFC29809ED400471AF9 /* PlaceTableViewCell.swift */,
+				ADEC1DFD29809ED400471AF9 /* PlaceTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -90,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				ADEC1DE229809BBE00471AF9 /* ViewController.swift */,
+				ADEC1DF829809D3C00471AF9 /* MapPlaceViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -155,6 +167,7 @@
 				ADEC1DEE29809BBF00471AF9 /* LaunchScreen.storyboard in Resources */,
 				ADEC1DEB29809BBF00471AF9 /* Assets.xcassets in Resources */,
 				ADEC1DE629809BBE00471AF9 /* Main.storyboard in Resources */,
+				ADEC1DFF29809ED400471AF9 /* PlaceTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,7 +181,10 @@
 				ADEC1DE329809BBE00471AF9 /* ViewController.swift in Sources */,
 				ADEC1DDF29809BBE00471AF9 /* AppDelegate.swift in Sources */,
 				ADEC1DE129809BBE00471AF9 /* SceneDelegate.swift in Sources */,
+				ADEC1DFE29809ED400471AF9 /* PlaceTableViewCell.swift in Sources */,
 				ADEC1DE929809BBE00471AF9 /* FavoritePlaces.xcdatamodeld in Sources */,
+				ADEC1DFB29809E4500471AF9 /* PlaceAnnotation.swift in Sources */,
+				ADEC1DF929809D3C00471AF9 /* MapPlaceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
