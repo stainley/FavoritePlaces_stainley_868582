@@ -90,6 +90,34 @@ class MapPlaceViewController: UIViewController {
         })
     }
     
+    func updateMyAnnotation(coordinate: CLLocationCoordinate2D) {
+        
+        CLGeocoder().reverseGeocodeLocation(CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude), completionHandler:  {(placemarks, error) in
+            
+            if error != nil {
+                print(error!)
+            } else {
+                DispatchQueue.main.async {
+                    if let placeMark = placemarks?[0] {
+                        let placeAnnotation = PlaceAnnotation()
+                        placeAnnotation.title = "Place to visit"
+                        placeAnnotation.coordinate = coordinate
+                        if placeMark.locality != nil {
+                            placeAnnotation.locality = placeMark.locality!
+                        }
+                        if placeMark.postalCode != nil {
+                            placeAnnotation.postalCode = placeMark.postalCode!
+                        }
+                        
+                        //self.map.addAnnotation(placeAnnotation)
+                        // SAVE DATA
+                    }
+                }
+            }
+        })
+    }
+    
+    
     @IBAction func searchLocationButton(_ sender: UIBarButtonItem) {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.delegate = self
@@ -139,6 +167,7 @@ extension MapPlaceViewController: MKMapViewDelegate {
         
         var annotationView: MKAnnotationView?
         if let annotation = annotation as? PlaceAnnotation {
+            
             annotationView = setupCustomAnnotationView(for: annotation, on: map)
         }
 
@@ -149,12 +178,26 @@ extension MapPlaceViewController: MKMapViewDelegate {
 
         let flagAnnotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "custom_place")
         flagAnnotationView.canShowCallout = true
-   
+        flagAnnotationView.isDraggable = true
+
         // Provide the left image icon for the annotation.
         flagAnnotationView.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
         
         return flagAnnotationView
     }
+    
+    //MARK: update annotation on map
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, didChange newState: MKAnnotationView.DragState, fromOldState oldState: MKAnnotationView.DragState) {
+        
+        if newState == MKAnnotationView.DragState.ending {
+            let droppedAnnotation = view.annotation
+            print("annotation dropped at: \(droppedAnnotation!.coordinate.latitude),\(droppedAnnotation!.coordinate.longitude)")
+            
+            
+            self.updateMyAnnotation(coordinate: droppedAnnotation!.coordinate)
+        }
+    }
+    
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         
@@ -164,8 +207,8 @@ extension MapPlaceViewController: MKMapViewDelegate {
         let calloutAction = UIAlertController(title: placeLocality, message: "placeInfo", preferredStyle: .alert)
         // Save into Core Data when user press SAVE
         calloutAction.addAction(UIAlertAction(title: "Save", style: .default, handler: { (action) -> () in
-            print("SAVE VALUE IN CORE DATA")
-            
+
+            /// Save into core data
             let placeEntity = PlaceEntity(context: self.context)
             
             placeEntity.locality = placeLocality
@@ -180,16 +223,14 @@ extension MapPlaceViewController: MKMapViewDelegate {
         present(calloutAction, animated: true)
     }
     
-    func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
-        
-    }
 }
 
 
 extension MapPlaceViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        UIApplication.shared.beginIgnoringInteractionEvents()
+        //UIApplication.shared.beginIgnoringInteractionEvents()
+        self.view.isUserInteractionEnabled = true
         
         let activityIndicator = UIActivityIndicatorView()
         activityIndicator.style = .medium
@@ -209,7 +250,8 @@ extension MapPlaceViewController: UISearchBarDelegate {
         activeSearch.start {
             (response, error) in
             activityIndicator.stopAnimating()
-            UIApplication.shared.endIgnoringInteractionEvents()
+            //UIApplication.shared.endIgnoringInteractionEvents()
+            
             
             if response == nil {
                 print(error!)
@@ -223,11 +265,10 @@ extension MapPlaceViewController: UISearchBarDelegate {
                     return
                 }
                 
-                let lat = coordinate.latitude
-                let lon = coordinate.longitude
+                let latitude = coordinate.latitude
+                let longitude = coordinate.longitude
                 
-                //self.addMyAnnotation(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lon))
-
+                self.addMyAnnotation(coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
             }
         }
     }

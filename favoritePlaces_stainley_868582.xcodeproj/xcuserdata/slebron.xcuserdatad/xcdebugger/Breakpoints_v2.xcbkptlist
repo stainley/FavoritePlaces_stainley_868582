@@ -23,22 +23,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C07AC329-AE95-47AD-9DC0-9A8767C96C4B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "favoritePlaces_stainley_868582/Controller/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "prepare(for:sender:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "B55D9793-C210-4424-934E-9D216763F584"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -55,33 +39,65 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E8CFB99E-8079-4C4B-A546-2838FC1185E3"
+            uuid = "419A1149-EC2C-47D1-8809-D588E620889C"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "favoritePlaces_stainley_868582/Controller/ViewController.swift"
+            filePath = "favoritePlaces_stainley_868582/Controller/MapPlaceViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "prepare(for:sender:)"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "updateMyAnnotation(coordinate:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FFA0E3FB-6B93-4A64-9B1B-3A9ABC52C5D8"
+            uuid = "F76A9445-9F4C-453E-B110-4121B0C3AAB6"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "favoritePlaces_stainley_868582/Controller/ViewController.swift"
+            filePath = "favoritePlaces_stainley_868582/Controller/MapPlaceViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "prepare(for:sender:)"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "updateMyAnnotation(coordinate:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F76A9445-9F4C-453E-B110-4121B0C3AAB6 - ca91e3b19f800ed"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "favoritePlaces_stainley_868582.MapPlaceViewController.updateMyAnnotation(coordinate: __C.CLLocationCoordinate2D) -&gt; ()"
+                  moduleName = "favoritePlaces_stainley_868582"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/slebron/Projects/Swift%20Projects/favoritePlaces_stainley_868582/favoritePlaces_stainley_868582/Controller/MapPlaceViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "F76A9445-9F4C-453E-B110-4121B0C3AAB6 - 6c8f739a3fd7fcea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;__C.CLPlacemark&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in favoritePlaces_stainley_868582.MapPlaceViewController.updateMyAnnotation(coordinate: __C.CLLocationCoordinate2D) -&gt; ()"
+                  moduleName = "favoritePlaces_stainley_868582"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/slebron/Projects/Swift%20Projects/favoritePlaces_stainley_868582/favoritePlaces_stainley_868582/Controller/MapPlaceViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "256">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

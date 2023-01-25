@@ -11,7 +11,6 @@ import MapKit
 class PlaceAnnotation: MKPointAnnotation {
     var locality: String?
     var postalCode: String?
-    var municipality: String?
-  
+
     
 }

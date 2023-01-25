@@ -27,6 +27,9 @@ class ViewController: UIViewController {
         
         places = loadPlaces()
         tablePlace.reloadData()
+        
+        tablePlace.rowHeight = UITableView.automaticDimension
+        tablePlace.estimatedRowHeight = 200
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -35,7 +38,6 @@ class ViewController: UIViewController {
     
     func refreshMyPlaces() {
         places = loadPlaces()
-        print("Total of Places \(places.count)")
         tablePlace.reloadData()
     }
     

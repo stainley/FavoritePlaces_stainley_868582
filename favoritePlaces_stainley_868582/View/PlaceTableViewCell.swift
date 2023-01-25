@@ -13,7 +13,6 @@ class PlaceTableViewCell: UITableViewCell {
     
     @IBOutlet weak var postalCodeLabel: UILabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

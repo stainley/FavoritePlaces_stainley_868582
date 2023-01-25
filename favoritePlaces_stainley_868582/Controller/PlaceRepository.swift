@@ -20,25 +20,12 @@ extension MapPlaceViewController {
     }
 
 
-    /*
-    func loadNotes(predicate: NSPredicate? = nil) {
-        let request: NSFetchRequest<PlaceEntity> = PlaceEntity.fetchRequest()
-        let folderPredicate = NSPredicate(format: "parentFolder.name=%@", selectedFolder!.name!)
-        request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
-        
-        if let additionalPredicate = predicate {
-            request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [folderPredicate, additionalPredicate])
-        } else {
-            request.predicate = folderPredicate
-        }
-        
-        do {
-            notes = try context.fetch(request)
-        } catch {
-            print("Error loading notes \(error.localizedDescription)")
-        }
-        tableView.reloadData()
-    }*/
+    // Update Place
+    func updatePlace(with place: Place) {
+        let newPlace = PlaceEntity(context: context)
+
+        savePlace()
+    }
     
    
 }
