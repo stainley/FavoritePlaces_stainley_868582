@@ -111,6 +111,18 @@ class MapPlaceViewController: UIViewController {
                         
                         //self.map.addAnnotation(placeAnnotation)
                         // SAVE DATA
+                        
+                        /*
+                        let placeEntity = PlaceEntity(context: self.context)
+                        
+                        placeEntity.locality = placeAnnotation.locality
+                        placeEntity.postalCode = placeAnnotation.postalCode
+                        placeEntity.latitude = placeAnnotation.coordinate.latitude
+                        placeEntity.longitude = placeAnnotation.coordinate.longitude
+                        
+                        self.savePlace()
+                        print("Place \(placeAnnotation.locality!) has been updated!!!")
+                         */
                     }
                 }
             }
@@ -195,6 +207,10 @@ extension MapPlaceViewController: MKMapViewDelegate {
             
             
             self.updateMyAnnotation(coordinate: droppedAnnotation!.coordinate)
+            let place = PlaceEntity()
+            place.latitude = droppedAnnotation!.coordinate.latitude
+            place.longitude = droppedAnnotation!.coordinate.longitude
+            mapDelegate?.updatePlace(with: place)
         }
     }
     

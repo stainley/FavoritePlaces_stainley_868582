@@ -20,12 +20,7 @@ extension MapPlaceViewController {
     }
 
 
-    // Update Place
-    func updatePlace(with place: Place) {
-        let newPlace = PlaceEntity(context: context)
-
-        savePlace()
-    }
+    
     
    
 }
@@ -53,6 +48,13 @@ extension ViewController {
         } catch {
             print("Error saving the notes \(error.localizedDescription)")
         }
+    }
+    
+    // Update Place
+    func updatePlace(with place: PlaceEntity) {
+        let newPlace = PlaceEntity(context: context)
+        
+        savePlace()
     }
     
 }
