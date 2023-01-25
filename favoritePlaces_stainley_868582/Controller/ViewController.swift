@@ -33,12 +33,20 @@ class ViewController: UIViewController {
         tablePlace.reloadData()
     }
     
+    func refreshMyPlaces() {
+        places = loadPlaces()
+        print("Total of Places \(places.count)")
+        tablePlace.reloadData()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "placeMapSegue"  {
+            let placeMapDestination = segue.destination as! MapPlaceViewController
+            placeMapDestination.mapDelegate = self
 
             if let indexPath = tablePlace.indexPathForSelectedRow {
-                let contactDetailDestination = segue.destination as! MapPlaceViewController
-                contactDetailDestination.placeEntity = places[indexPath.row]
+                placeMapDestination.mapDelegate = self
+                placeMapDestination.placeEntity = places[indexPath.row]
             }
         }
     }

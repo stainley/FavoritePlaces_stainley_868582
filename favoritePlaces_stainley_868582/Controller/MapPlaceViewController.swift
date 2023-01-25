@@ -18,6 +18,8 @@ class MapPlaceViewController: UIViewController {
     
     var placeEntity: PlaceEntity?
     
+    weak var mapDelegate: ViewController?
+    
     // context
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -35,6 +37,10 @@ class MapPlaceViewController: UIViewController {
         map.addGestureRecognizer(tapGesture)
        
         map.delegate = self
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        mapDelegate?.refreshMyPlaces()
     }
     
     override func viewWillAppear(_ animated: Bool) {
