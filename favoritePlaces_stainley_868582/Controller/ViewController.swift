@@ -32,6 +32,16 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         tablePlace.reloadData()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "placeMapSegue"  {
+
+            if let indexPath = tablePlace.indexPathForSelectedRow {
+                let contactDetailDestination = segue.destination as! MapPlaceViewController
+                contactDetailDestination.placeEntity = places[indexPath.row]
+            }
+        }
+    }
 
 }
 

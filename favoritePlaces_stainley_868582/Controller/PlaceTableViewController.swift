@@ -24,13 +24,12 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        performSegue(withIdentifier: "placeMapSegue", sender: self)
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: nil, handler: {(action, view, completionHandler) in
             let alertController = UIAlertController(title: "Delete", message: "Are you sure?", preferredStyle: .actionSheet)
-           
                      
             alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
             

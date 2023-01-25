@@ -44,7 +44,7 @@
                     <navigationItem key="navigationItem" id="bM3-ZW-JfG">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="6Gl-mB-6FQ">
                             <connections>
-                                <segue destination="btX-FA-0li" kind="show" id="I75-03-het"/>
+                                <segue destination="btX-FA-0li" kind="show" identifier="placeMapSegue" id="I75-03-het"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

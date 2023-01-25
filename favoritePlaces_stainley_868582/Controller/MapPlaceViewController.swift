@@ -16,6 +16,8 @@ class MapPlaceViewController: UIViewController {
     var location: CLLocationManager!
     var locationManager = CLLocationManager()
     
+    var placeEntity: PlaceEntity?
+    
     // context
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -31,10 +33,22 @@ class MapPlaceViewController: UIViewController {
         
         let tapGesture = UILongPressGestureRecognizer(target: self, action: #selector(addAnnotationByTapping))
         map.addGestureRecognizer(tapGesture)
-        
+       
         map.delegate = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        guard placeEntity != nil else {
+            return
+        }
+        
+        let myPlace = PlaceAnnotation()
+        myPlace.coordinate = CLLocationCoordinate2D(latitude: placeEntity?.latitude ?? 0.0, longitude: placeEntity?.longitude ?? 0.0)
+        myPlace.postalCode = placeEntity?.postalCode
+        myPlace.locality = placeEntity?.locality
+        map.addAnnotation(myPlace)
+    }
     
     
     @objc func addAnnotationByTapping(gesture: UIGestureRecognizer) {
