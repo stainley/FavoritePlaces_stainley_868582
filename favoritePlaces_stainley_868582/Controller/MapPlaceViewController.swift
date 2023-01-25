@@ -103,26 +103,15 @@ class MapPlaceViewController: UIViewController {
                         placeAnnotation.title = "Place to visit"
                         placeAnnotation.coordinate = coordinate
                         if placeMark.locality != nil {
-                            placeAnnotation.locality = placeMark.locality!
+                            self.placeEntity?.locality = placeMark.locality
                         }
                         if placeMark.postalCode != nil {
-                            placeAnnotation.postalCode = placeMark.postalCode!
+                            self.placeEntity?.postalCode = placeMark.postalCode
+
                         }
+        
+                        self.mapDelegate?.updatePlace(with: self.placeEntity!)
                         
-                        //self.map.addAnnotation(placeAnnotation)
-                        // SAVE DATA
-                        
-                        /*
-                        let placeEntity = PlaceEntity(context: self.context)
-                        
-                        placeEntity.locality = placeAnnotation.locality
-                        placeEntity.postalCode = placeAnnotation.postalCode
-                        placeEntity.latitude = placeAnnotation.coordinate.latitude
-                        placeEntity.longitude = placeAnnotation.coordinate.longitude
-                        
-                        self.savePlace()
-                        print("Place \(placeAnnotation.locality!) has been updated!!!")
-                         */
                     }
                 }
             }
@@ -205,12 +194,9 @@ extension MapPlaceViewController: MKMapViewDelegate {
             let droppedAnnotation = view.annotation
             print("annotation dropped at: \(droppedAnnotation!.coordinate.latitude),\(droppedAnnotation!.coordinate.longitude)")
             
-            
+            placeEntity?.latitude = droppedAnnotation!.coordinate.latitude
+            placeEntity?.longitude = droppedAnnotation!.coordinate.longitude
             self.updateMyAnnotation(coordinate: droppedAnnotation!.coordinate)
-            let place = PlaceEntity()
-            place.latitude = droppedAnnotation!.coordinate.latitude
-            place.longitude = droppedAnnotation!.coordinate.longitude
-            mapDelegate?.updatePlace(with: place)
         }
     }
     

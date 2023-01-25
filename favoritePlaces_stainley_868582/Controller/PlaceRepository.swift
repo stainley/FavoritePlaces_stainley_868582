@@ -52,8 +52,6 @@ extension ViewController {
     
     // Update Place
     func updatePlace(with place: PlaceEntity) {
-        let newPlace = PlaceEntity(context: context)
-        
         savePlace()
     }
     
