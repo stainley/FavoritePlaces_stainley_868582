@@ -19,10 +19,7 @@ extension MapPlaceViewController {
         }
     }
 
-    func deletePlace(place: PlaceEntity) {
-        context.delete(place)
-    }
-    
+
     /*
     func loadNotes(predicate: NSPredicate? = nil) {
         let request: NSFetchRequest<PlaceEntity> = PlaceEntity.fetchRequest()
@@ -58,4 +55,17 @@ extension ViewController {
         }
         return []
     }
+    
+    func deletePlace(place: PlaceEntity) {
+        context.delete(place)
+    }
+    
+    func savePlace() {
+        do {
+            try context.save()
+        } catch {
+            print("Error saving the notes \(error.localizedDescription)")
+        }
+    }
+    
 }

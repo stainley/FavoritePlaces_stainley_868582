@@ -150,6 +150,8 @@ extension MapPlaceViewController: MKMapViewDelegate {
             
             placeEntity.locality = placeLocality
             placeEntity.postalCode = placeAnnotation.postalCode
+            placeEntity.latitude = placeAnnotation.coordinate.latitude
+            placeEntity.longitude = placeAnnotation.coordinate.longitude
             
             self.savePlace()
             print("Place \(placeLocality!) has been saved!!!")

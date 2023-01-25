@@ -11,7 +11,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tablePlace: UITableView!
     
-    var places: [Place] = [Place(locality: "Toronto", postalCode: "9988dd")]
+    var places: [PlaceEntity] = []
     var place: Place?
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -24,8 +24,14 @@ class ViewController: UIViewController {
         
         let nib = UINib(nibName: "PlaceTableViewCell", bundle: nil)
         tablePlace.register(nib, forCellReuseIdentifier: "placeCell")
+        
+        places = loadPlaces()
+        tablePlace.reloadData()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        tablePlace.reloadData()
+    }
 
 }
 

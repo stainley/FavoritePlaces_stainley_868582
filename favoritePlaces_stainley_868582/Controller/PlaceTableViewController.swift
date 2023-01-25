@@ -37,11 +37,11 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             alertController.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
                 tableView.beginUpdates()
                 //Remove contact from DB
-                //self.deleteContact(contact: self.filteredContact[indexPath.row])
-                //self.saveContact()
                 
-                //self.filteredContact.remove(at: indexPath.row)
-                //self.contacts.remove(at: indexPath.row)
+                self.deletePlace(place: self.places[indexPath.row])
+                self.savePlace()
+                
+                self.places.remove(at: indexPath.row)
             
                 tableView.deleteRows(at: [indexPath], with: .fade)
                 tableView.endUpdates()
