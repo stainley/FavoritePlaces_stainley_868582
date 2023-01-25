@@ -9,9 +9,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var tablePlace: UITableView!
+    
+    var places: [Place] = [Place(locality: "Toronto", postalCode: "9988dd")]
+    var place: Place?
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        tablePlace.dataSource = self
+        tablePlace.delegate = self
+        
+        let nib = UINib(nibName: "PlaceTableViewCell", bundle: nil)
+        tablePlace.register(nib, forCellReuseIdentifier: "placeCell")
     }
 
 

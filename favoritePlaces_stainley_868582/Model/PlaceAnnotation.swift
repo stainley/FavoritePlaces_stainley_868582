@@ -6,7 +6,12 @@
 //
 
 import Foundation
+import MapKit
 
-class PlaceAnnotation {
+class PlaceAnnotation: MKPointAnnotation {
+    var locality: String?
+    var postalCode: String?
+    var municipality: String?
+  
     
 }

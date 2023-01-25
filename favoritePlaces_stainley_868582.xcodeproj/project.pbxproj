@@ -18,6 +18,9 @@
 		ADEC1DFB29809E4500471AF9 /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEC1DFA29809E4500471AF9 /* PlaceAnnotation.swift */; };
 		ADEC1DFE29809ED400471AF9 /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEC1DFC29809ED400471AF9 /* PlaceTableViewCell.swift */; };
 		ADEC1DFF29809ED400471AF9 /* PlaceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADEC1DFD29809ED400471AF9 /* PlaceTableViewCell.xib */; };
+		ADEC1E0129809FD600471AF9 /* PlaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEC1E0029809FD600471AF9 /* PlaceTableViewController.swift */; };
+		ADEC1E032980A01900471AF9 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEC1E022980A01900471AF9 /* Place.swift */; };
+		ADEC1E052980AE7000471AF9 /* PlaceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEC1E042980AE7000471AF9 /* PlaceRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		ADEC1DFA29809E4500471AF9 /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
 		ADEC1DFC29809ED400471AF9 /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
 		ADEC1DFD29809ED400471AF9 /* PlaceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceTableViewCell.xib; sourceTree = "<group>"; };
+		ADEC1E0029809FD600471AF9 /* PlaceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTableViewController.swift; sourceTree = "<group>"; };
+		ADEC1E022980A01900471AF9 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		ADEC1E042980AE7000471AF9 /* PlaceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				ADEC1DFA29809E4500471AF9 /* PlaceAnnotation.swift */,
+				ADEC1E022980A01900471AF9 /* Place.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -102,6 +109,8 @@
 			children = (
 				ADEC1DE229809BBE00471AF9 /* ViewController.swift */,
 				ADEC1DF829809D3C00471AF9 /* MapPlaceViewController.swift */,
+				ADEC1E0029809FD600471AF9 /* PlaceTableViewController.swift */,
+				ADEC1E042980AE7000471AF9 /* PlaceRepository.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -181,8 +190,11 @@
 				ADEC1DE329809BBE00471AF9 /* ViewController.swift in Sources */,
 				ADEC1DDF29809BBE00471AF9 /* AppDelegate.swift in Sources */,
 				ADEC1DE129809BBE00471AF9 /* SceneDelegate.swift in Sources */,
+				ADEC1E052980AE7000471AF9 /* PlaceRepository.swift in Sources */,
 				ADEC1DFE29809ED400471AF9 /* PlaceTableViewCell.swift in Sources */,
 				ADEC1DE929809BBE00471AF9 /* FavoritePlaces.xcdatamodeld in Sources */,
+				ADEC1E0129809FD600471AF9 /* PlaceTableViewController.swift in Sources */,
+				ADEC1E032980A01900471AF9 /* Place.swift in Sources */,
 				ADEC1DFB29809E4500471AF9 /* PlaceAnnotation.swift in Sources */,
 				ADEC1DF929809D3C00471AF9 /* MapPlaceViewController.swift in Sources */,
 			);

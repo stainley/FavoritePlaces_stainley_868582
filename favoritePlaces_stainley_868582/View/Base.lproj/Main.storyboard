@@ -20,6 +20,16 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Qwu-V1-N8A">
                                 <rect key="frame" x="0.0" y="140" width="375" height="638"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="placeCell" id="DTW-yr-GK2" customClass="PlaceTableViewCell" customModule="favoritePlaces_stainley_868582" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="375" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DTW-yr-GK2" id="mWq-i6-fWG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -38,6 +48,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tablePlace" destination="Qwu-V1-N8A" id="Ixp-i3-S4Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -62,12 +75,24 @@
                             <constraint firstItem="1WD-Ol-y1m" firstAttribute="bottom" secondItem="i9G-1M-yDy" secondAttribute="bottom" id="1Ul-2v-zMi"/>
                             <constraint firstItem="1WD-Ol-y1m" firstAttribute="top" secondItem="i9G-1M-yDy" secondAttribute="top" constant="31" id="65h-TF-VbB"/>
                             <constraint firstItem="1WD-Ol-y1m" firstAttribute="trailing" secondItem="i9G-1M-yDy" secondAttribute="trailing" id="6VS-Ux-358"/>
+                            <constraint firstItem="1WD-Ol-y1m" firstAttribute="top" secondItem="i9G-1M-yDy" secondAttribute="top" constant="31" id="E0V-pm-TWK"/>
+                            <constraint firstItem="1WD-Ol-y1m" firstAttribute="leading" secondItem="i9G-1M-yDy" secondAttribute="leading" id="Qu2-aD-cTY"/>
+                            <constraint firstItem="1WD-Ol-y1m" firstAttribute="trailing" secondItem="i9G-1M-yDy" secondAttribute="trailing" id="avH-GU-ynE"/>
                             <constraint firstItem="1WD-Ol-y1m" firstAttribute="leading" secondItem="i9G-1M-yDy" secondAttribute="leading" id="eLa-xy-6dV"/>
+                            <constraint firstItem="1WD-Ol-y1m" firstAttribute="bottom" secondItem="i9G-1M-yDy" secondAttribute="bottom" id="j9d-i7-qCZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="drF-dp-4XA">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="JAO-mf-TAG"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="JAO-mf-TAG">
+                            <connections>
+                                <action selector="searchLocationButton:" destination="btX-FA-0li" id="OpJ-vz-eCN"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="map" destination="1WD-Ol-y1m" id="ALe-kl-YHH"/>
+                        <outlet property="searchButton" destination="JAO-mf-TAG" id="5aw-vV-kDv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQ6-6Y-ZmF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
